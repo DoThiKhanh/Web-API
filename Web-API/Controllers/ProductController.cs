@@ -18,7 +18,7 @@ namespace Web_API.Controllers
         {
             _productBusiness = productBusiness;
         }
-
+            
         [Route("create-product")]
         [HttpPost]
         public ProductModel CreateProduct([FromBody] ProductModel model)
