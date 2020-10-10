@@ -4,11 +4,10 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace BLL
 {
-   public class CategoryBusiness : ICategoryBusiness
+    public partial class CategoryBusiness : ICategoryBusiness
     {
         private ICategoryRepository _res;
         public CategoryBusiness(ICategoryRepository CategoryRes)
@@ -39,5 +38,6 @@ namespace BLL
             }
             return lstChilds.OrderBy(s => s.category_id).ToList();
         }
+
     }
 }
