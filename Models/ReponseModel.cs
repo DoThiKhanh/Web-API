@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 
 namespace Models
-{public  class ReponseModel
+{
+    public class ReponseModel
     {
         public long TotalItems { get; set; }
         public int Page { get; set; }
