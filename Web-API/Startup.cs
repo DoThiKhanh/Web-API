@@ -47,6 +47,9 @@ namespace Web_API
             services.AddTransient<IBrandBusiness, BrandBusiness>();
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IProductBusiness, ProductBusiness>();
+            services.AddTransient<IUserBusiness, UserBusiness>();
+            services.AddTransient<IUserRepository, UserRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +68,22 @@ namespace Web_API
                 endpoints.MapControllers();
             });
             app.UseHttpsRedirection();
+
+            //user
+            app.UseRouting();
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
