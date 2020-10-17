@@ -75,6 +75,22 @@ namespace DAL
             }
         }
 
+
+        public List<ProductModel> Gettuongtu( int product_id)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sptuongtu", " @product_id", product_id);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<ProductModel>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public List<ProductModel> GetDataNew()
         {
             string msgError = "";

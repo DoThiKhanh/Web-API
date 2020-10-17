@@ -40,6 +40,13 @@ namespace Web_API.Controllers
             return _productBusiness.GetDataAll();
         }
 
+        [Route("get-tuongtu/{id}")]
+        [HttpGet]
+        public IEnumerable<ProductModel> Gettuongtu( int id)
+        {
+            return _productBusiness.Gettuongtu( id);
+        }
+
         [Route("get-new")]
         [HttpGet]
         public IEnumerable<ProductModel> GetDataNew()

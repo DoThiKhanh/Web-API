@@ -11,6 +11,9 @@ namespace BLL.Interfaces
         ProductModel GetDatabyID(string id);
         List<ProductModel> GetDataAll();
         List<ProductModel> GetDataNew();
+        List<ProductModel> Gettuongtu(int product_id);
+
         List<ProductModel> Search(int pageIndex, int pageSize, out long total, string category_id);
+
     }
 }

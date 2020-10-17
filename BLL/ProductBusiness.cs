@@ -26,6 +26,10 @@ namespace BLL
         {
             return _res.GetDataAll();
         }
+        public List<ProductModel> Gettuongtu(int product_id)
+        {
+            return _res.Gettuongtu( product_id);
+        }
         public List<ProductModel> GetDataNew()
         {
             return _res.GetDataNew();
