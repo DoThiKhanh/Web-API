@@ -9,7 +9,7 @@ namespace BLL.Interfaces
     {
         bool Create(ProductModel model);
         ProductModel GetDatabyID(string id);
-        List<ProductModel> GetDataAll();
+        List<ProductModel> GetDataAll(int page_index, int page_size,out long total);
         List<ProductModel> GetDataNew();
         List<ProductModel> Gettuongtu(int product_id);
 
