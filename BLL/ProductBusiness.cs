@@ -30,7 +30,7 @@ namespace BLL
         {
             return _res.TK(pageIndex, pageSize, out total, product_name, product_price);
         }
-        public ProductModel GetDatabyID(string id)
+        public ProductModel GetDatabyID(int id)
         {
             return _res.GetDatabyID(id);
         }

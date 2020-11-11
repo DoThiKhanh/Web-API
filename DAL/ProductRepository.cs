@@ -110,7 +110,7 @@ namespace DAL
                 throw ex;
             }
         }
-        public ProductModel GetDatabyID(string id)
+        public ProductModel GetDatabyID(int id)
         {
             string msgError = "";
             try
